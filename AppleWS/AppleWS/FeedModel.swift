@@ -10,8 +10,6 @@ import UIKit
 import ObjectMapper
 import RealmSwift
 
-// TODO:  Need to add code for realm -
-
 class FeedModel: Mappable {
     var feed: FeedDict?
     
