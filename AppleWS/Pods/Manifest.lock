@@ -23,6 +23,9 @@ PODS:
     - PINCache (>= 3.0.0-beta)
   - PINRemoteImage/iOS (3.0.0-beta.3):
     - PINRemoteImage/Core
+  - PromiseKit/CorePromise (4.0.5)
+  - PromiseKit/Photos (4.0.5):
+    - PromiseKit/CorePromise
   - Realm (2.1.0):
     - Realm/Headers (= 2.1.0)
   - Realm/Headers (2.1.0)
@@ -37,6 +40,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 4.0)
   - AsyncDisplayKit
   - Instabug
+  - PromiseKit/Photos
   - RealmSwift (~> 2.1)
   - SimplePDF
 
@@ -50,10 +54,11 @@ SPEC CHECKSUMS:
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
+  PromiseKit: 593b5e24ded6cbb1ebc708bc2c3428a8a5632d91
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
   SimplePDF: 9004c9ad4aa30a9ccec6032f4f12b76bc053ec55
 
-PODFILE CHECKSUM: 09d44a2c286afaee641f6176a73ae53e2cc75de3
+PODFILE CHECKSUM: 3385778d6b7c2c4d85b23e5a2139165b8b18b200
 
 COCOAPODS: 1.1.0.rc.2

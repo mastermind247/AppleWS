@@ -11,6 +11,8 @@ import Alamofire
 import AlamofireObjectMapper
 import AsyncDisplayKit
 import SimplePDF
+import PromiseKit
+import PMKPhotos
 
 class ViewController: UIViewController {
 
@@ -32,10 +34,15 @@ class ViewController: UIViewController {
         imageView1.tintColor = UIColor.gray
         self.view.addSubview(imageView1)
         createPDFWithData()
+        callPhotosPromise()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func callPhotosPromise() {
+        
     }
 }
 

@@ -12,4 +12,5 @@ target 'AppleWS' do
   pod 'RealmSwift', '~> 2.1'
   pod 'Instabug'
   pod 'SimplePDF'
+  pod 'PromiseKit/Photos'
 end
