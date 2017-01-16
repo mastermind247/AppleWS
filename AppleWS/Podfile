@@ -11,4 +11,5 @@ target 'AppleWS' do
   pod 'AsyncDisplayKit'
   pod 'RealmSwift', '~> 2.1'
   pod 'Instabug'
+  pod 'SimplePDF'
 end

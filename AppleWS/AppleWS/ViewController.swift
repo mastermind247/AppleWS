@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 import AsyncDisplayKit
+import SimplePDF
 
 class ViewController: UIViewController {
 
@@ -23,11 +24,59 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDataFromItunesFeed()
+//        getDataFromItunesFeed()
+        let image = UIImage(named: "Image")
+        image?.withRenderingMode(.alwaysTemplate)
+        let imageView1 = UIImageView(frame: CGRect(x: 200, y: 200, width: 100, height: 100))
+        imageView1.image = image
+        imageView1.tintColor = UIColor.gray
+        self.view.addSubview(imageView1)
+        createPDFWithData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+extension ViewController {
+    func createPDFWithData() {
+        let dataDict = ["THIS IS QUESTION": "ANSWER"]
+        var dataArr = [dataDict]
+        dataArr.append(["THIS IS QUESTION 2 THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2THIS IS QUESTION 2": "ANSWER 2"])
+        dataArr.append(["THIS IS QUESTION 3 ": "ANSWER 3"])
+        dataArr.append(["THIS IS QUESTION 4 ": "ANSWER 4"])
+        dataArr.append(["THIS IS QUESTION 5 ": "ANSWER 5"])
+        dataArr.append(["THIS IS QUESTION 6 ": "ANSWER 6"])
+        dataArr.append(["THIS IS QUESTION 7 ": "ANSWER 7"])
+        dataArr.append(["THIS IS QUESTION 8 ": "ANSWER 8"])
+        dataArr.append(["THIS IS QUESTION 9 ": "ANSWER 9"])
+        
+        
+        let A4paperSize = CGSize(width: 595, height: 842)
+        let pdf = SimplePDF(pageSize: A4paperSize)
+        for text in dataArr {
+            for (key,value) in text {
+                let question = key
+                let answer = value
+                pdf.addText("\(question)")
+                pdf.addText(" \(answer)")
+            }
+        }
+
+        if let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
+            let fileName = "flow.pdf"
+            let documentsFileName = docDir + "/" + fileName
+            let pdfData = pdf.generatePDFdata()
+            do {
+                try pdfData.write(to: URL(fileURLWithPath: documentsFileName), options: .atomic)
+                print("\nThe generated pdf can be found at:")
+                print("\n\t\(documentsFileName)\n")
+            } catch {
+                print(error)
+            }
+        }
+
     }
 }
 
@@ -63,7 +112,6 @@ extension ViewController {
     func getDataFromItunesFeed() {
         Alamofire.request(iTunesUrl).responseObject { (response: DataResponse<FeedModel>) in
             self.feedsResponse = response.result.value
-            print("Images - \(self.feedsResponse?.feed?.entry?.last?.image?.last)")
             let high = self.feedsResponse?.feed?.entry?.last?.image?.last
             let medium = self.feedsResponse?.feed?.entry?.last?.image?[1]
             let low = self.feedsResponse?.feed?.entry?.last?.image?.first
@@ -90,12 +138,10 @@ extension ViewController: ASMultiplexImageNodeDelegate, ASMultiplexImageNodeData
     
     func multiplexImageNode(_ imageNode: ASMultiplexImageNode, urlForImageIdentifier imageIdentifier: ASImageIdentifier) -> URL? {
         
-        print(imageIdentifier)
         let newImageUrl = URL(string: imageUrls[imageIdentifier as! String]!)
         return newImageUrl
     }
     
     func multiplexImageNode(_ imageNode: ASMultiplexImageNode, didFinishDownloadingImageWithIdentifier imageIdentifier: ASImageIdentifier, error: Error?) {
-        print(imageIdentifier)
     }
 }

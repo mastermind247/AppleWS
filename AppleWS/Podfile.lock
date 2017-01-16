@@ -28,6 +28,7 @@ PODS:
   - Realm/Headers (2.1.0)
   - RealmSwift (2.1.0):
     - Realm (= 2.1.0)
+  - SimplePDF (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.2)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - AsyncDisplayKit
   - Instabug
   - RealmSwift (~> 2.1)
+  - SimplePDF
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
@@ -50,7 +52,8 @@ SPEC CHECKSUMS:
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
+  SimplePDF: 9004c9ad4aa30a9ccec6032f4f12b76bc053ec55
 
-PODFILE CHECKSUM: b872d026d60a9be4d03000aeb1f788606c521ed1
+PODFILE CHECKSUM: 09d44a2c286afaee641f6176a73ae53e2cc75de3
 
 COCOAPODS: 1.1.0.rc.2

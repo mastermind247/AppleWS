@@ -1,16 +1,18 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
+      "filename" : "font-awesome_4-7-0_rocket_256_0_007dff_none-2.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "filename" : "NC.png",
+      "idiom" : "iphone",
+      "filename" : "font-awesome_4-7-0_rocket_256_0_007dff_none.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
+      "filename" : "font-awesome_4-7-0_rocket_256_0_007dff_none-1.png",
       "scale" : "3x"
     }
   ],

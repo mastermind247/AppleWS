@@ -59,20 +59,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SimplePDF.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>16FDF17FD4AF0FE61950A5BEFA39A10B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B1CE2921CE9F2D9F41C07E87B64DF2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CA6BFB9B7B440F1FC6F53EBA636FCD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>228FFC4E78F899B58C33C57F31513A8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>333E47F1004946B94926B19979768D18</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>389B279EA64DE9A0CD7CBD74DC0C4562</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,17 +112,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE23384430CDBEEF61C918BEFF7B00FC</key>
+		<key>B574420571BBBAD6FD02AAF603C5B17D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C5CBCAA97E951CC882334464FBDF983D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EBF1951BF8F6BD505EDF5E4A136B13EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
