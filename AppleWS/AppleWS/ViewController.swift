@@ -49,7 +49,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let high = self.feedsResponse?.feed?.entry?[indexPath.row].image?.last
         let medium = self.feedsResponse?.feed?.entry?[indexPath.row].image?[1]
         let low = self.feedsResponse?.feed?.entry?[indexPath.row].image?.first
-        
+        let entry = self.feedsResponse?.feed?.entry
         cell.imageUrls["original"] = String(describing: high!)
         cell.imageUrls["medium"] = String(describing: medium!)
         cell.imageUrls["thumb"] = String(describing: low!)
