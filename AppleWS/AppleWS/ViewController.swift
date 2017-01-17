@@ -12,9 +12,10 @@ import AlamofireObjectMapper
 import AsyncDisplayKit
 import SimplePDF
 import PromiseKit
-import PMKPhotos
+import MessageUI
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     let iTunesUrl = "https://itunes.apple.com/us/rss/toptvepisodes/limit=100/json"
     
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
         imageView1.tintColor = UIColor.gray
         self.view.addSubview(imageView1)
         createPDFWithData()
-        callPhotosPromise()
+//        callPhotosPromise()
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,8 +83,36 @@ extension ViewController {
             } catch {
                 print(error)
             }
+            let mailComposeViewController = configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                self.showSendMailErrorAlert()
+            }
         }
-
+    }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["parth.adroja.sa@gmail.com"])
+        mailComposerVC.setSubject("Sending you an pdf file...")
+        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let pdfFileName = documentsPath.appending("/flow.pdf")
+        let fileData = NSData(contentsOfFile: pdfFileName)
+        mailComposerVC.addAttachmentData(fileData as! Data, mimeType: "application/pdf ", fileName: "flow")
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 
