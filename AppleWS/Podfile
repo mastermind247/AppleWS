@@ -13,4 +13,6 @@ target 'AppleWS' do
   pod 'Instabug'
   pod 'SimplePDF'
   pod 'PromiseKit/Photos'
+  pod 'Anymotion', :git => 'https://github.com/agens-no/Anymotion.git', :branch => 'master'
+  pod 'DLRadioButton'
 end

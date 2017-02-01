@@ -1,0 +1,6 @@
+framework module Anymotion {
+  umbrella header "Anymotion-umbrella.h"
+
+  export *
+  module * { export * }
+}

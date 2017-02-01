@@ -13,6 +13,8 @@ import AsyncDisplayKit
 import SimplePDF
 import PromiseKit
 import MessageUI
+import Anymotion
+import PhotosUI
 
 
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
@@ -27,23 +29,23 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getDataFromItunesFeed()
+        getDataFromItunesFeed()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    } 
+    override func viewDidAppear(_ animated: Bool) {
         let image = UIImage(named: "Image")
         image?.withRenderingMode(.alwaysTemplate)
         let imageView1 = UIImageView(frame: CGRect(x: 200, y: 200, width: 100, height: 100))
         imageView1.image = image
         imageView1.tintColor = UIColor.gray
         self.view.addSubview(imageView1)
-        createPDFWithData()
-//        callPhotosPromise()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func callPhotosPromise() {
-        
+        _ = PHPhotoLibrary.requestAuthorization().then(execute: { (status) -> Void in print(status.rawValue) })
+        let goRight = ANYPOPSpring(kPOPLayerPositionX).toValue(100).springSpeed(5).animation(for: imageView1.layer)
+        let fadeOut = ANYCABasic(#keyPath(CALayer.opacity)).toValue(0).duration(1).animation(for: imageView1.layer)
     }
 }
 

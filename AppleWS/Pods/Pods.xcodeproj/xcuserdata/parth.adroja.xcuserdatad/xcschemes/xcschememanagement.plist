@@ -24,7 +24,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Anymotion.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>AsyncDisplayKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DLRadioButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -69,6 +79,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -82,27 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B041730FAF41C90E2D8D969274C34D0</key>
+		<key>5112B1FB344ABF3B2321EC1CAD5752BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5574BEAAF21C3313E1A2506E5A279B44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5F55189113AE45EC7C421A050A369FF1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6A0E2E6D23E3B20A6736443F61FF470E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6D6627B4D698E488BCE3E993371A978C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6D72289A27C4C97AD1C362837293A4B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,17 +127,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C1CB4A52AC1B84886DA0C6AF6C37E3EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C5CBCAA97E951CC882334464FBDF983D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED84C0BB36434E8543EEDDDB6A7BA29C</key>
+		<key>E636D369F27A1FDBE6DAD29C740CDE4F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E774321D482F8DE2BC4F4F29934C44EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3990E3EAC160D4E4F89177D966FC1E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4E7240BA6B28A4D486B27AD2F9C7580</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>FBD082A0D35F7917EAB9DD9D3CCA9976</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCF86E4E806D4CC33F931B80E3154BF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

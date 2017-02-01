@@ -7,6 +7,8 @@ PODS:
   - AlamofireObjectMapper (4.0.0):
     - Alamofire (~> 4.0)
     - ObjectMapper (~> 2.0)
+  - Anymotion (0.1):
+    - pop (~> 1.0)
   - AsyncDisplayKit (1.9.92):
     - AsyncDisplayKit/PINRemoteImage (= 1.9.92)
   - AsyncDisplayKit/ASDealloc2MainObject (1.9.92)
@@ -16,6 +18,7 @@ PODS:
     - AsyncDisplayKit/Core
     - PINCache (= 3.0.1-beta)
     - PINRemoteImage/iOS (= 3.0.0-beta.3)
+  - DLRadioButton (1.4.9)
   - Instabug (6.0.4)
   - ObjectMapper (2.2.1)
   - PINCache (3.0.1-beta)
@@ -23,6 +26,7 @@ PODS:
     - PINCache (>= 3.0.0-beta)
   - PINRemoteImage/iOS (3.0.0-beta.3):
     - PINRemoteImage/Core
+  - pop (1.0.9)
   - PromiseKit/CorePromise (4.0.5)
   - PromiseKit/Photos (4.0.5):
     - PromiseKit/CorePromise
@@ -38,27 +42,42 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.2)
   - AlamofireNetworkActivityIndicator (~> 2.1)
   - AlamofireObjectMapper (~> 4.0)
+  - Anymotion (from `https://github.com/agens-no/Anymotion.git`, branch `master`)
   - AsyncDisplayKit
+  - DLRadioButton
   - Instabug
   - PromiseKit/Photos
   - RealmSwift (~> 2.1)
   - SimplePDF
+
+EXTERNAL SOURCES:
+  Anymotion:
+    :branch: master
+    :git: https://github.com/agens-no/Anymotion.git
+
+CHECKOUT OPTIONS:
+  Anymotion:
+    :commit: 5549aa0c7f9a5dfb190d2a4cbdf831f8919fbb60
+    :git: https://github.com/agens-no/Anymotion.git
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
   AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
+  Anymotion: e7654bc98f90f750ca4683c48989476593c7cdbe
   AsyncDisplayKit: 49d94f5739669d666ff7cdc3430f43f0b2cfbeaf
+  DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
   Instabug: 7431c30f6e8883b2e6a9ce4b922ed51cbb25ad19
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PromiseKit: 593b5e24ded6cbb1ebc708bc2c3428a8a5632d91
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
   SimplePDF: 9004c9ad4aa30a9ccec6032f4f12b76bc053ec55
 
-PODFILE CHECKSUM: 3385778d6b7c2c4d85b23e5a2139165b8b18b200
+PODFILE CHECKSUM: f3acb491f2ebbbe50a1de0043597bff9b14c0c16
 
 COCOAPODS: 1.1.0.rc.2

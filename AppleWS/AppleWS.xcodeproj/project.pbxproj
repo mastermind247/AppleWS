@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601113A11E41B3CF001AB47F /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601113A01E41B3CF001AB47F /* QuestionsViewController.swift */; };
 		60D2081B1DEEA6860068F8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2081A1DEEA6860068F8C1 /* AppDelegate.swift */; };
 		60D2081D1DEEA6860068F8C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2081C1DEEA6860068F8C1 /* ViewController.swift */; };
 		60D208201DEEA6860068F8C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D2081E1DEEA6860068F8C1 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		4D0C6A2B574CC44CECE9CC06 /* Pods-AppleWS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleWS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleWS/Pods-AppleWS.release.xcconfig"; sourceTree = "<group>"; };
+		601113A01E41B3CF001AB47F /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		60D208171DEEA6860068F8C1 /* AppleWS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D2081A1DEEA6860068F8C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D2081C1DEEA6860068F8C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				60D2081A1DEEA6860068F8C1 /* AppDelegate.swift */,
 				60D2081C1DEEA6860068F8C1 /* ViewController.swift */,
+				601113A01E41B3CF001AB47F /* QuestionsViewController.swift */,
 				60D546841DEED17C0067B544 /* FeedModel.swift */,
 				60DD015B1DF185C600552E41 /* ASTableViewCell.swift */,
 				60D2081E1DEEA6860068F8C1 /* Main.storyboard */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D2081D1DEEA6860068F8C1 /* ViewController.swift in Sources */,
+				601113A11E41B3CF001AB47F /* QuestionsViewController.swift in Sources */,
 				60D546851DEED17C0067B544 /* FeedModel.swift in Sources */,
 				60D2081B1DEEA6860068F8C1 /* AppDelegate.swift in Sources */,
 				60DD015C1DF185C600552E41 /* ASTableViewCell.swift in Sources */,
